@@ -1,0 +1,23 @@
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="large-12 columns">
+
+                <h3>CONTROLLER - Load A Photo</h3>
+                <input ng-model="$ctrl.imgFile" ng-click='$ctrl.changed()' filelist-bind name="imgFile" type="file" id="the-photo-file-field">
+                <div ng-show="$ctrl.imgAvailable" id="preview">
+                    <!--image will be inserted here-->
+                    <img ng-src="{{ $ctrl.the_url }}" width='500'/>
+                </div>
+                <div id="data" class="large-8 columns">
+                    <h2 ng-show="$ctrl.imgAvailable" id="name">{{$ctrl.img.name}}</h2>
+                    <p ng-show="$ctrl.imgAvailable" id="size">{{$ctrl.img.size}}</p>
+                    <p ng-show="$ctrl.imgAvailable" id="type">{{$ctrl.img.type}}</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
